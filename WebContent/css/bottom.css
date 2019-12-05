@@ -1,0 +1,21 @@
+.bottom {
+    background-color: rgb(54, 124, 189);
+    width: 960px;
+    height: 100px;
+    margin: -10px auto;
+    padding: 0px;
+    border: none;
+}
+
+.bottom label{
+    border: none;
+    color: white;
+    padding: 14px 32px;
+    width: 33%;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    outline: none;
+}

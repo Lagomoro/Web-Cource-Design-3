@@ -1,0 +1,51 @@
+.menu {
+    position: fixed;
+    top: 0px;
+    left: calc(50% - 480px);
+    width: 960px;
+    height: 40px;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: #EEEEEE;
+    z-index: 9999;
+    border: none;
+}
+
+.menu-stay {
+    width: 960px;
+    height: 40px;
+    margin: 0px auto;
+    padding: 0px;
+    background-color: #EEEEEE;
+    border: none;
+}
+
+.menu-logo {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+}
+
+.menu-logo label {
+    display: inline-block;
+    color: black;
+    font-size: 10pt;
+    font-weight: normal;
+    margin: 11px;
+    border: none;
+}
+
+.menu-submenu {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.menu-submenu label {
+    display: inline-block;
+    color: black;
+    font-size: 10pt;
+    font-weight: normal;
+    margin: 11px;
+    border: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>moro网上商城 - 购物车</title>
+        <link rel="stylesheet" type="text/css" href="css/identity-base-compact-light.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/menu.css" />
+        <link rel="stylesheet" type="text/css" href="css/content.css" />
+        <link rel="stylesheet" type="text/css" href="css/cartbox.css" />
+        <link rel="stylesheet" type="text/css" href="css/bottom.css" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/md5.min.js"></script>
+    </head>
+    <body>
+        <div class="menu">
+            <div class="menu-logo">
+                <label><a href="./index.html">moro网上商城</a></label>
+            </div>
+            <div class="menu-submenu">
+                <label><a href="./login.html" id="login">您好，请登录</a></label>
+                <label id="cart" style="display: none"><a href="./cart.html">我的购物车</a></label>
+                <label id="shop" style="display: none"><a href="./shop.html">我的店铺</a></label>
+            </div>
+        </div>
+        <div class="menu-stay"></div>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <div class="content"">
+            <label></label>
+            <label></label>
+            <label></label>
+            <label></label>
+            <label></label>
+            <label style="font-size: 18pt;text-align: center;" id="price">我的购物车 &nbsp;&nbsp;0元</label>
+            <label style="text-align: center;"><a href = "javascript:void(0)" onclick="clearCart()">清空购物车</a></label>
+            <label></label>
+            <div id="cartContent" class="cartbox">
+                <div>
+                    <label>空空如也……</label>
+                    <label>添加自己的第一件商品吧！</label>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/content-cart.js"></script>
+        <div class="bottom footerNote halfSecTrans">
+            <label>201800301015 - 王永睿</label><label> - Java Web Course Design - </label><label>作业3：moro网上商城</label><label>©2019 Designed by Lagomoro</label>
+        </div>
+    </body>
+</html>

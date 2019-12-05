@@ -1,0 +1,65 @@
+.banner {
+    width: 960px;
+    height: 390px;
+    margin: 0px auto;
+    margin-bottom: 25px;
+    padding: 0px;
+    border: none;
+    position: relative;
+}
+
+.banner-images {
+    width: 960px;
+    height: 390px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.banner-images img {
+    cursor: default;
+    position: absolute;
+    vertical-align: top
+}
+
+.banner-images label {
+    cursor: pointer;
+    position: absolute;
+    font-size: 10pt;
+    font-weight: bold;
+    left: 20px;
+    bottom: 5px;
+}
+
+.banner-images label.black {
+    color: black;
+    text-shadow:0.5px 0px 0px white, -0.5px 0px 0px white, 0px 0.5px 0px white, 0px -0.5px 0px white;
+}
+
+.banner-images label.white {
+    color: white;
+    text-shadow:0.5px 0px 0px black, -0.5px 0px 0px black, 0px 0.5px 0px black, 0px -0.5px 0px black;
+}
+
+.banner-numbers {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.banner-numbers span {
+    display: inline-block;
+    margin: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: #EEEEEE;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+.banner-numbers span.current {
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    border: 8px solid orangered;
+}
