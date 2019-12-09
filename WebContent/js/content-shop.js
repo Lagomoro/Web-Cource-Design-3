@@ -17,7 +17,11 @@ function checkShop(){
     }
 }
 
-checkShop();
+shop_onloginSuccess = onloginSuccess;
+onloginSuccess = function(){
+    shop_onloginSuccess();
+    checkShop();
+}
 
 function deleteShop(id){
     postEvent('./deleteProduct.do', "id=" + id, function(json){

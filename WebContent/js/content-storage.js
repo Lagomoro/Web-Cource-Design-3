@@ -11,7 +11,11 @@ function checkStorage(){
     }, function(json){});
 }
 
-checkStorage();
+storage_onloginSuccess = onloginSuccess;
+onloginSuccess = function(){
+    storage_onloginSuccess();
+    checkStorage();
+}
 
 function addToCart(id){
     var cookies = getCookies();

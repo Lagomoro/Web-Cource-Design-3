@@ -27,6 +27,8 @@ function getCookies(){
     return cookieObj;
 }
 
+onloginSuccess = function(){};
+
 function checkLogin(){
     var cookies = getCookies();
     if(cookies.username){
@@ -40,11 +42,14 @@ function checkLogin(){
                 a = document.getElementById('order');
                 a.style.display = "inline-block";
                 a = document.getElementById('shop');
-                a.style.display = "inline-block"; 
+                a.style.display = "inline-block";
+                onloginSuccess.call(); 
             }
         }, function(json){});
     }
 }
+
+checkLogin();
 
 function logout(){
     var cookies = getCookies();
@@ -65,5 +70,3 @@ function logout(){
         }, function(json){});
     }
 }
-
-checkLogin();

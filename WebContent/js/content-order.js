@@ -17,7 +17,11 @@ function checkOrder(){
     }
 }
 
-checkOrder();
+order_onloginSuccess = onloginSuccess;
+onloginSuccess = function(){
+    order_onloginSuccess();
+    checkOrder();
+}
 
 function deleteOrder(id){
     postEvent('./deleteOrder.do', "id=" + id, function(json){

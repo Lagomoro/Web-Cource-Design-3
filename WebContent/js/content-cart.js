@@ -21,7 +21,11 @@ function checkCart(){
     }
 }
 
-checkCart();
+cart_onloginSuccess = onloginSuccess;
+onloginSuccess = function(){
+    cart_onloginSuccess();
+    checkCart();
+}
 
 function changeCart(id, amount){
     var cookies = getCookies();
