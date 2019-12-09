@@ -37,6 +37,8 @@ function checkLogin(){
                 a.setAttribute('href', './modify.html');
                 a = document.getElementById('cart');
                 a.style.display = "inline-block"; 
+                a = document.getElementById('order');
+                a.style.display = "inline-block";
                 a = document.getElementById('shop');
                 a.style.display = "inline-block"; 
             }
@@ -54,6 +56,8 @@ function logout(){
                 a.setAttribute('href', './login.html');
                 window.location.href = "./login.html";
                 a = document.getElementById('cart');
+                a.style.display = "none"; 
+                a = document.getElementById('order');
                 a.style.display = "none"; 
                 a = document.getElementById('shop');
                 a.style.display = "none"; 

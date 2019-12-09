@@ -30,6 +30,7 @@ public class MySQLModel {
 	public static PreparedStatement statementUserNickname;
 	public static PreparedStatement statementUserPassword;
 	public static PreparedStatement statementUserCart;
+	public static PreparedStatement statementUserOrder;
 	
 	public static PreparedStatement statementProductGet;
 	public static PreparedStatement statementProductInsert;
@@ -54,7 +55,8 @@ public class MySQLModel {
 					+ "username VARCHAR(16) NOT NULL, "
 					+ "nickname VARCHAR(16) NOT NULL, "
 					+ "password VARCHAR(32) NOT NULL, "
-					+ "shopping_cart VARCHAR(256), PRIMARY KEY (id)) ENGINE = InnoDB;");
+					+ "shopping_cart VARCHAR(256), "
+					+ "order_list VARCHAR(256), PRIMARY KEY (id)) ENGINE = InnoDB;");
 			statementProductTable = connection.prepareStatement("CREATE TABLE " + TABLE_PRODUCT + " ("
 					+ "id INT NOT NULL AUTO_INCREMENT, "
 					+ "username VARCHAR(16) NOT NULL, "
@@ -73,6 +75,8 @@ public class MySQLModel {
 					+ " SET password = REPLACE (password, ?, ?) WHERE username = ?");
 			statementUserCart = connection.prepareStatement("UPDATE " + TABLE_USER
 					+ " SET shopping_cart = ? WHERE username = ?");
+			statementUserOrder = connection.prepareStatement("UPDATE " + TABLE_USER
+					+ " SET order_list = ? WHERE username = ?");
 			
 			statementProductGet = connection.prepareStatement("SELECT * FROM " + TABLE_PRODUCT
 					+ " WHERE id = ?");
@@ -294,6 +298,26 @@ public class MySQLModel {
 	 * @return
 	 * 0: Success 
 	 * 1: Unknown user.
+	 */
+	public static int updateOrder(String username, Order order) {
+		try {
+			if(!haveUser(username)) {
+				return 1;
+			} else {
+				statementUserOrder.setString(1, order.toString());
+				statementUserOrder.setString(2, username);
+				return 1 - statementUserOrder.executeUpdate();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 1;
+		}
+	}
+	
+	/**
+	 * @return
+	 * 0: Success 
+	 * 1: Unknown user.
 	 * 2: Invalid password.
 	 */
 	public static int checkLogin(String username, String password) {
@@ -344,6 +368,23 @@ public class MySQLModel {
 				String shopping_cart = resultSet.getString("shopping_cart");
 				resultSet.close();
 				return new Cart(shopping_cart == null ? "" : shopping_cart);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public static Order getUserOrder(String username) {
+		try {
+			if(!haveUser(username)) {
+				return null;
+			} else {
+				ResultSet resultSet = getUser(username);
+				resultSet.next();
+				String order = resultSet.getString("order_list");
+				resultSet.close();
+				return new Order(order == null ? "" : order);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

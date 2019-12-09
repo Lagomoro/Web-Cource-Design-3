@@ -51,5 +51,11 @@ public class Product {
 				" <a href=\\\"javascript:void(0)\\\" onclick=\\\"changeCart(" + this.getId() + ", 1)\\\">&nbsp;+&nbsp;</a>" + "</label>");
 		builder.append("<label>" + this.content + "</label></div></div>");
 	}
+	
+	public void toOrderHtml(StringBuilder builder, int amount) {
+		builder.append("<div><img src=\\\"" + this.image +  "\\\"/><div><label>" + this.name + 
+				" &nbsp;&nbsp;单价：" + this.price + "元  &nbsp;&nbsp;数量：" + amount + "</label>");
+		builder.append("<label>" + this.content + "</label></div></div>");
+	}
 
 }

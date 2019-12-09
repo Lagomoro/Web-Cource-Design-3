@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/menu.css" />
         <link rel="stylesheet" type="text/css" href="css/content.css" />
-        <link rel="stylesheet" type="text/css" href="css/cartbox.css" />
+        <link rel="stylesheet" type="text/css" href="css/orderbox.css" />
         <link rel="stylesheet" type="text/css" href="css/bottom.css" />
         <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="js/md5.min.js"></script>
@@ -26,27 +26,22 @@
         </div>
         <div class="menu-stay"></div>
         <script type="text/javascript" src="js/menu.js"></script>
-        <div class="content"">
+        <div class="content">
             <label></label>
             <label></label>
             <label></label>
             <label></label>
             <label></label>
-            <label style="font-size: 18pt;text-align: center;">我的购物车</label>
-            <label style="text-align: center;"><a href = "javascript:void(0)" onclick="clearCart()">清空购物车</a></label>
+            <label style="font-size: 18pt;text-align: center;" id="price">我的订单</label>
             <label></label>
-            <div id="cartContent" class="cartbox">
+            <div id="orderContent" class="orderbox">
                 <div>
                     <label>等待服务器响应中……</label>
                     <label>若等待时间过长，请联系服务器管理员。</label>
                 </div>
             </div>
-            <label></label>
-            <label style="text-align: right;padding-right: 40px;">共&nbsp;<text id="price">0</text>&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;<a href = "javascript:void(0)" onclick="addOrder()">结算</a></label>
-            <label></label>
-            <label></label>
         </div>
-        <script type="text/javascript" src="js/content-cart.js"></script>
+        <script type="text/javascript" src="js/content-order.js"></script>
         <div class="bottom footerNote halfSecTrans">
             <label>201800301015 - 王永睿</label><label> - Java Web Course Design - </label><label>作业3：moro网上商城</label><label>©2019 Designed by Lagomoro</label>
         </div>

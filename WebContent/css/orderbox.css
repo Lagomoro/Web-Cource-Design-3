@@ -1,0 +1,52 @@
+.orderbox div{
+    width: 920px;
+    height: auto;
+    margin: 0px auto;
+    margin-top: -1px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.orderbox div label{
+    font-size: 16px;
+}
+
+.orderbox div div {
+    width: 860px;
+    height: auto;
+    margin: 0px auto;
+    margin-left: 20px;
+    margin-top: -1px;
+    padding: 10px;
+    padding-bottom: 4px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.orderbox div div img{
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    margin-left: 20px;
+    padding: 0px;
+    border: 1px solid lightgray;
+}
+
+.orderbox div div div {
+    width: 700px;
+    height: 100px;
+    margin: 0px auto;
+    margin-left: 120px;
+    margin-bottom: 4px;
+    padding: 10px;
+    border: none;
+}
+
+.orderbox div div div label{
+    font-size: 16px;
+}
